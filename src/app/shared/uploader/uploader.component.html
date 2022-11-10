@@ -1,0 +1,5 @@
+<button class="file-upload" (click)="fileInput.click()">
+  <label>{{ label }}</label>
+  <mat-icon class="input-icon">{{ iconName }}</mat-icon>
+</button>
+<input hidden (change)="onFileSelected()" name="file" [(ngModel)]="srcResult" #fileInput type="file" id="file">

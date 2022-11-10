@@ -1,0 +1,27 @@
+<div class="auth-container">
+  <div class="auth-header">
+    <img src="/assets/images/logo.jpg" class="logo">
+  </div>
+  <div class="form-container">
+    <div class="form-desc">
+      <h2 class="form-title">Welcome To SHIFTit</h2>
+      <p class="form-summary">Please login to continue</p>
+    </div>
+    <form class="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input [type]="inputType" matInput placeholder="Placeholder">
+      <mat-icon (click)="toggleVisibility()" matSuffix>{{ iconName }}</mat-icon>
+    </mat-form-field>
+    <a class="secondary-link">Forgot Password?</a>
+    <button  mat-button class="bg-primary">LOGIN</button>
+    </form>
+  </div>
+  <div class="auth-footer">
+    <p class="account-question">Don't have an account? <a [routerLink]="['/auth/signup']">SIGN-UP</a></p>
+  </div>
+</div>

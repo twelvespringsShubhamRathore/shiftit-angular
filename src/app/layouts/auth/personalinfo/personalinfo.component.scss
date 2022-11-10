@@ -1,0 +1,23 @@
+.input-icon{
+  font-size: 1.8rem !important;
+  z-index: 1200;
+  height: 100%;
+  color: #1d066b;
+  width: 100%;
+  text-align: right;
+}
+
+.form-control{
+  padding: 10px;
+}
+
+.form-control .mat-button-wrapper{
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+  label{
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: #B8A59D;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="auth-container">
+  <div class="auth-header">
+    <img src="/assets/images/logo.jpg" class="logo">
+  </div>
+  <div class="form-container">
+    <div class="form-desc">
+      <h2 class="form-title">Create Account</h2>
+      <p class="form-summary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, reiciendis.</p>
+    </div>
+    <form class="form"  (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input [type]="inputType" matInput placeholder="Placeholder">
+      <mat-icon (click)="toggleVisibility()" matSuffix>{{ iconName }}</mat-icon>
+    </mat-form-field>
+    <button type="submit" mat-button class="bg-primary">Continue</button>
+    <div class="terms-block">
+      <mat-checkbox color="primary"></mat-checkbox>
+      <p class="terms">I agree with <a href="/terms" class="link">terms</a> and <a href="/privacy" class="link">privacy</a></p>
+    </div>
+    </form>
+    <div class="auth-footer">
+      <p class="account-question">Already have an account?<a [routerLink]="['/auth/login']">LOGIN</a></p>
+    </div>
+  </div>
+
+</div>
