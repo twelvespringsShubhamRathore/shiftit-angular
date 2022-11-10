@@ -1,1 +1,36 @@
-<p>verify works!</p>
+<div class="auth-container">
+  <div class="auth-header">
+    <img src="/assets/images/logo.jpg" class="logo">
+  </div>
+  <div class="form-container">
+    <div class="form-desc">
+      <h2 class="form-title">Verification</h2>
+      <p class="form-summary">
+        Please enter the verification code sent to your mobile number 832-950-5682
+      </p>
+    </div>
+    <form class="form" (ngSubmit)="submit()">
+    <div class="row">
+      <mat-form-field class="col-lg-2 text-center" appearance="outline">
+        <input type="text" matInput maxlength="1">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 text-center" appearance="outline">
+        <input type="text" matInput maxlength="1">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 text-center" appearance="outline">
+        <input type="text" matInput maxlength="1">
+      </mat-form-field>
+      <mat-form-field class="col-lg-2 text-center" appearance="outline">
+        <input type="text" matInput maxlength="1">
+      </mat-form-field>
+    </div>
+    <button  mat-button class="bg-primary">Verify</button>
+    <div class="form-message text-center">
+      <p>I didn't get the code <a>Resend Code</a></p>
+    </div>
+    </form>
+  </div>
+  <div class="auth-footer">
+    <p class="account-question">Don't have an account? <a [routerLink]="['/auth/signup']">SIGN-UP</a></p>
+  </div>
+</div>

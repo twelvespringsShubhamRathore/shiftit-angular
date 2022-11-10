@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+interface Food {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-personalinfo',
@@ -6,11 +12,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personalinfo.component.scss']
 })
 export class PersonalinfoComponent implements OnInit {
-  inputType="password";
-  iconName="add_circle"
   srcResult = "";
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +31,6 @@ export class PersonalinfoComponent implements OnInit {
 
   submit()
   {
-
+    this.router.navigateByUrl('/auth/verify');
   }
 }

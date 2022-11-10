@@ -1,10 +1,14 @@
 <div class="sidebar">
   <div class="navlinks">
-    <img src="/assets/images/logo.jpg" alt="" />
+    <div class="logo">
+      <img src="/assets/images/logo.jpg" alt="" />
+    </div>
     <app-navbar></app-navbar>
   </div>
-  <div>
-    <img src="/assets/images/logout.png " alt="" />
-    <a href="javascript:void(0)">Logout</a>
-  </div>
+  <mat-list role="list">
+    <mat-list-item role="list-item" class="nav-footer">
+      <img src="/assets/images/logout.png " alt="" />
+      <a href="javascript:void(0)">Logout</a>
+    </mat-list-item>
+  </mat-list>
 </div>
