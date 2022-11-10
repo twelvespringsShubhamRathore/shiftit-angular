@@ -7,11 +7,12 @@
   padding: 12px;
   border: 1px solid #d2d2d2;
   background-color: #FFF;
+  margin-bottom: 14px;
   label{
     font-size: 1rem;
     font-weight: light;
     color: #B8A59D;
-    word-break: unset;
+    white-space: nowrap;
     width: fit-content;
   }
   .input-icon{
