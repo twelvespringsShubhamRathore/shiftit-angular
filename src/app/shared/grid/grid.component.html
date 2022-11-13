@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <table class="grid">
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns">{{ col }}</th>
+        <th [ngIf]="IsActionEnable">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of gridData">
+        <td *ngFor="let col of row.columns">
+          <ng-container *ngIf="col.columnType=='date'">
+            {{ col.value | date }}
+          </ng-container>
+          <ng-container *ngIf="col.columnType!='date'">
+            {{ col.value }}
+          </ng-container>
+        </td>
+        <td>
+          <button  *ngIf="row.isViewEnable" mat-icon-button>
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <button  *ngIf="row.isEditable" mat-icon-button>
+            <mat-icon>edit_square</mat-icon>
+          </button>
+          <button  *ngIf="row.isDuplicatable" mat-icon-button>
+            <mat-icon>content_copy</mat-icon>
+          </button>
+          <button  *ngIf="row.isDeletable" mat-icon-button>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

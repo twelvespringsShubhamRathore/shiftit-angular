@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   inputType="password";
-  iconName="visibility_off"
+  iconName="visibility_off";
 
   // form:FormGroup = new FormGroup({
   //   "Email":[]

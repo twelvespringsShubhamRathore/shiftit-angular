@@ -1,0 +1,53 @@
+<div class="container-fluid pt-4">
+  <div class="card-container">
+    <div class="welcome-card  h-100">
+      <div class="card card-body d-fle flex-col justify-content-center h-100  welcome-bg">
+        <h1 class="tile-lg-title">Welcome, {{username}}</h1>
+        <p class="tile-lg-content">Let's manage your dashboard</p>
+      </div>
+    </div>
+    <div class="normal-card">
+      <app-tiles tileTitle="Published Jobs" tileSubtitle="Total" tileContent="03"></app-tiles>
+    </div>
+    <div class="normal-card">
+      <app-tiles tileTitle="Vacant Positions" tileSubtitle="Total" tileContent="01"></app-tiles>
+    </div>
+    <div class="normal-card">
+      <app-tiles tileTitle="Pending Approvals" tileSubtitle="Total" tileContent="48"></app-tiles>
+    </div>
+    <div class="welcome-card  h-100">
+      <div class="card card-body info-card d-fle flex-col justify-content-center h-100">
+        <div class="title-section">
+          <h2 class="title">Upcoming Jobs</h2>
+          <div class="d-flex">
+            <a class="link">View Calendar</a>
+            <img src="/assets/images/calender.png" />
+          </div>
+        </div>
+        <div class="info-section">
+          <p class="specialty">Clinical Nurse Specialist (CNS)</p>
+          <span class="address">sacramento, CA 35035</span>
+        </div>
+        <div class="date-time-section">
+          <h2 class="date">Feb 16 - Feb 17</h2>
+          <h3 class="time">8:00 AM - 4:00 PM</h3>
+        </div>
+      </div>
+    </div>
+    <div class="normal-card">
+      <app-tiles tileTitle="Active Jobs" tileSubtitle="Total" tileContent="09"></app-tiles>
+    </div>
+    <div class="normal-card">
+      <app-tiles tileTitle="Mark Complete" tileSubtitle="Total" tileContent="02"></app-tiles>
+    </div>
+    <div class="normal-card">
+      <app-tiles tileTitle="Completed Jobs" tileSubtitle="Total" tileContent="54"></app-tiles>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="data-header">
+      <h2 class="page-title">Pending Job Approvals (6)</h2>
+      <a class="primary-link">View all</a>
+    </div>
+  </div>
+</div>

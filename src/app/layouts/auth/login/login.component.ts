@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +10,14 @@ export class LoginComponent implements OnInit {
   inputType="password";
   iconName="visibility_off"
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   submit()
   {
-
+    this.router.navigateByUrl("/dashboard");
   }
 
   toggleVisibility()

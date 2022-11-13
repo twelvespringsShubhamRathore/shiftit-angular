@@ -12,9 +12,12 @@ import { UploaderComponent } from './uploader/uploader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatListModule } from '@angular/material/list';
+import { HeaderComponent } from './header/header.component';
+import { TilesComponent } from './tiles/tiles.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
-  declarations: [UploaderComponent, SidebarComponent, NavbarComponent],
+  declarations: [UploaderComponent, SidebarComponent, NavbarComponent, HeaderComponent, TilesComponent, GridComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -41,6 +44,9 @@ import { MatListModule } from '@angular/material/list';
     UploaderComponent,
     SidebarComponent,
     MatListModule,
+    HeaderComponent,
+    TilesComponent,
+    GridComponent
   ],
 })
 export class SharedModule {}

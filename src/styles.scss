@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-$link-color: #1E0E61;
+$link-color: #5505af;
 $success: #44B9A7;
 $white: #FFF;
 $secondary: #d2d2d2;
@@ -18,6 +18,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .link:hover{
   color: $success;
+}
+
+.welcome-bg{
+  background-image: linear-gradient(to right, #5505af, #1d066b) !important;
+  color: #FFF;
 }
 
 p{
@@ -208,6 +213,11 @@ p{
   font-size: 1.3rem;
 }
 
+.mat-button,.mat-raised-button .mat-link-button{
+  display: flex;
+  align-items: center;
+}
+
 .bg-primary{
   background-color: #44B9A7 !important;
   color: #FFF;
@@ -241,132 +251,10 @@ label{
 }
 
 
-.row{
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  grid-gap: 10px;
-}
 
 .text-center{
   text-align: center !important;
 }
-
-.col-lg-1{
-  grid-column: span 1;
-}
-.col-lg-2{
-  grid-column: span 2;
-}
-.col-lg-3{
-  grid-column: span 3;
-}
-.col-lg-4{
-  grid-column: span 4;
-}
-.col-lg-5{
-  grid-column: span 5;
-}
-.col-lg-6{
-  grid-column: span 6;
-}
-.col-lg-7{
-  grid-column: span 7;
-}
-.col-lg-8{
-  grid-column: span 8;
-}
-.col-lg-9{
-  grid-column: span 9;
-}
-.col-lg-10{
-  grid-column: span 10;
-}
-.col-lg-11{
-  grid-column: span 11;
-}
-.col-lg-12{
-  grid-column: span 12;
-}
-
-
-@media (max-width: 1024px) {
-  .col-md-1{
-    grid-column: span 1;
-  }
-  .col-md-2{
-    grid-column: span 2;
-  }
-  .col-md-3{
-    grid-column: span 3;
-  }
-  .col-md-4{
-    grid-column: span 4;
-  }
-  .col-md-5{
-    grid-column: span 5;
-  }
-  .col-md-6{
-    grid-column: span 6;
-  }
-  .col-md-7{
-    grid-column: span 7;
-  }
-  .col-md-8{
-    grid-column: span 8;
-  }
-  .col-md-9{
-    grid-column: span 9;
-  }
-  .col-md-10{
-    grid-column: span 10;
-  }
-  .col-md-11{
-    grid-column: span 11;
-  }
-  .col-md-12{
-    grid-column: span 12;
-  }
-}
-
-@media (max-width: 500px) {
-  .col-sm-1{
-    grid-column: span 1;
-  }
-  .col-sm-2{
-    grid-column: span 2;
-  }
-  .col-sm-3{
-    grid-column: span 3;
-  }
-  .col-sm-4{
-    grid-column: span 4;
-  }
-  .col-sm-5{
-    grid-column: span 5;
-  }
-  .col-sm-6{
-    grid-column: span 6;
-  }
-  .col-sm-7{
-    grid-column: span 7;
-  }
-  .col-sm-8{
-    grid-column: span 8;
-  }
-  .col-sm-9{
-    grid-column: span 9;
-  }
-  .col-sm-10{
-    grid-column: span 10;
-  }
-  .col-sm-11{
-    grid-column: span 11;
-  }
-  .col-sm-12{
-    grid-column: span 12;
-  }
-}
-
 
 /*----------------- wrapper ----------------*/
 .wrapper{
@@ -393,5 +281,56 @@ label{
     box-shadow: 4px 8px 8px #F4F4F4;
     box-sizing: border-box;
   }
+}
+
+.header{
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #F4F4F4;
+  .page-header{
+    padding: 0px 30px;
+    .page-title{
+      font-size: 28px;
+      font-weight: 550;
+      color: $link-color;
+      margin-bottom: 0px;
+    }
+  }
+  .setting{
+    width: fit-content;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    .user-section{
+      text-align: right;
+      .username{
+        margin-bottom: 0px;
+        font-size: 1.2rem;
+      }
+      .link{
+        font-size: 0.9rem;
+        font-weight: lighter;
+        color: $link-color;
+      }
+    }
+  }
+
+  .link-btn{
+    font-size: 18px !important;
+    background-color:  $link-color;
+    color: #FFF !important;
+    padding: 5px 25px !important;
+    border-radius: 7px;
+  }
+}
+
+.router-outlet{
+  width: inherit;
+  padding: 10px 20px;
 }
 /*----------------- wrapper ----------------*/
