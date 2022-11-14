@@ -1,0 +1,96 @@
+.message-center {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  height: 750px;
+  .message-lists {
+    border-right: 2px solid #F4F4F4;
+    height: 100%;
+    width: 25%;
+    .messages {
+      margin: 20px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      align-content: flex-start;
+      justify-content: space-between;
+      img {
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+      }
+      .message-details {
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0px;
+        }
+        p {
+          margin: 0px 0px 8px 0px;
+          font-weight: 400;
+        }
+      }
+      .operations {
+        height: 100%;
+        mat-icon {
+          font-size: 36px;
+          height: 32px;
+        }
+      }
+    }
+  }
+  .message-view {
+    height: 100%;
+    width: 75%;
+    .joblist {
+      display: flex;
+      flex-direction: column;
+      .list {
+        display: flex;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        .left-side-details {
+          display: flex;
+          flex-direction: column;
+          .job-title {
+            font-size: 18px;
+            opacity: 0.8;
+          }
+          .job-address {
+            font-size: 12px;
+            opacity: 0.9;
+          }
+          .job-duration{
+            font-size: 20px;
+            opacity: 0.9;
+          }
+        }
+        .right-side-details {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          .job-code{
+            font-size: 18px;
+            opacity: 0.8;
+          }
+          .view-job-more-details{
+            color: black;
+            opacity: 0.8;
+          }
+        }
+      }
+      .separator{
+        height: 1px;
+        width: 100%;
+        opacity: 1;
+        background-color: #f4f4f4;
+        margin: 20px 0px 20px 0px;
+      }
+    }
+  }
+}

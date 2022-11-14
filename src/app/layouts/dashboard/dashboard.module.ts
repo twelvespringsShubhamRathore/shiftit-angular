@@ -12,6 +12,14 @@ const routes:Route[] = [
       {
         path:'',
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path:'home',
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path:'messagecenter',
+        loadChildren: () => import('./message-center/message-center.module').then(m => m.MessageCenterModule)
       }
     ]
   }

@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './header/header.component';
 import { TilesComponent } from './tiles/tiles.component';
 import { GridComponent } from './grid/grid.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [UploaderComponent, SidebarComponent, NavbarComponent, HeaderComponent, TilesComponent, GridComponent],
@@ -30,6 +31,7 @@ import { GridComponent } from './grid/grid.component';
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
+    RouterModule,
   ],
   exports: [
     MatButtonModule,
