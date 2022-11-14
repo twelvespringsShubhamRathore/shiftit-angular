@@ -256,81 +256,82 @@ label{
   text-align: center !important;
 }
 
-/*----------------- wrapper ----------------*/
-.wrapper{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #E8EFF9;
-  app-sidebar{
-    height: 93vh;
-    background-color: #FFF;
-    width: 15%;
-    border-radius: 30px;
-    box-sizing: border-box;
-  }
-  .main{
-    margin-left: 20px;
-    width: 70%;
-    background-color: #FFF;
-    height: 93vh;
-    border-radius: 30px;
-    box-sizing: border-box;
-    box-shadow: 4px 8px 8px #F4F4F4;
-    box-sizing: border-box;
-  }
-}
+// /*----------------- wrapper ----------------*/
+// .wrapper{
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #E8EFF9;
+//   app-sidebar{
+//     height: 93vh;
+//     background-color: #FFF;
+//     width: 250px;
+//     border-radius: 30px;
+//     box-sizing: border-box;
+//   }
+//   .main{
+//     margin-left: 20px;
+//     width: 70%;
+//     background-color: #FFF;
+//     height: auto;
+//     min-height: 93vh;
+//     border-radius: 30px;
+//     box-sizing: border-box;
+//     box-shadow: 4px 8px 8px #F4F4F4;
+//     box-sizing: border-box;
+//   }
+// }
 
-.header{
-  width: 100%;
-  height: 110px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #F4F4F4;
-  .page-header{
-    padding: 0px 30px;
-    .page-title{
-      font-size: 28px;
-      font-weight: 550;
-      color: $link-color;
-      margin-bottom: 0px;
-    }
-  }
-  .setting{
-    width: fit-content;
-    padding: 0px 30px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-    .user-section{
-      text-align: right;
-      .username{
-        margin-bottom: 0px;
-        font-size: 1.2rem;
-      }
-      .link{
-        font-size: 0.9rem;
-        font-weight: lighter;
-        color: $link-color;
-      }
-    }
-  }
+// .header{
+//   width: 100%;
+//   height: 110px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   border-bottom: 2px solid #F4F4F4;
+//   .page-header{
+//     padding: 0px 30px;
+//     .page-title{
+//       font-size: 28px;
+//       font-weight: 550;
+//       color: $link-color;
+//       margin-bottom: 0px;
+//     }
+//   }
+//   .setting{
+//     width: fit-content;
+//     padding: 0px 30px;
+//     display: flex;
+//     align-items: center;
+//     gap: 20px;
+//     justify-content: center;
+//     .user-section{
+//       text-align: right;
+//       .username{
+//         margin-bottom: 0px;
+//         font-size: 1.2rem;
+//       }
+//       .link{
+//         font-size: 0.9rem;
+//         font-weight: lighter;
+//         color: $link-color;
+//       }
+//     }
+//   }
 
-  .link-btn{
-    font-size: 18px !important;
-    background-color:  $link-color;
-    color: #FFF !important;
-    padding: 5px 25px !important;
-    border-radius: 7px;
-  }
-}
+//   .link-btn{
+//     font-size: 18px !important;
+//     background-color:  $link-color;
+//     color: #FFF !important;
+//     padding: 5px 25px !important;
+//     border-radius: 7px;
+//   }
+// }
 
-.router-outlet{
-  width: inherit;
-  padding: 10px 20px;
-}
-/*----------------- wrapper ----------------*/
+// .router-outlet{
+//   width: inherit;
+//   padding: 10px 20px;
+// }
+// /*----------------- wrapper ----------------*/

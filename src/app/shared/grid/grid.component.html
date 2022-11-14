@@ -2,32 +2,27 @@
   <table class="grid">
     <thead>
       <tr>
-        <th *ngFor="let col of columns">{{ col }}</th>
-        <th [ngIf]="IsActionEnable">Actions</th>
+        <th *ngFor="let col of columns" [ngClass]="{'w-100':(col == 'Facility Name')}">{{ col }}</th>
+        <th *ngIf="IsActionEnable"></th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let row of gridData">
-        <td *ngFor="let col of row.columns">
-          <ng-container *ngIf="col.columnType=='date'">
-            {{ col.value | date }}
-          </ng-container>
-          <ng-container *ngIf="col.columnType!='date'">
-            {{ col.value }}
-          </ng-container>
+      <tr *ngFor="let row of data">
+        <td *ngFor="let item of row.columns" [ngClass]="{'w-100':(item.columnkey == 'Facility Name')}">
+          {{ item.value }}
         </td>
-        <td>
-          <button  *ngIf="row.isViewEnable" mat-icon-button>
-            <mat-icon>visibility</mat-icon>
+        <td *ngIf="IsActionEnable">
+          <button mat-icon-button *ngIf="row.isViewEnable">
+            <img src="/assets/images/eye.png">
           </button>
-          <button  *ngIf="row.isEditable" mat-icon-button>
-            <mat-icon>edit_square</mat-icon>
+          <button mat-icon-button *ngIf="row.isEditable">
+            <img src="/assets/images/edit.png">
           </button>
-          <button  *ngIf="row.isDuplicatable" mat-icon-button>
-            <mat-icon>content_copy</mat-icon>
+          <button mat-icon-button *ngIf="row.isDuplicatable">
+            <img src="/assets/images/copy.png">
           </button>
-          <button  *ngIf="row.isDeletable" mat-icon-button>
-            <mat-icon>delete</mat-icon>
+          <button mat-icon-button *ngIf="row.isDeletable">
+            <img src="/assets/images/dlt.png">
           </button>
         </td>
       </tr>

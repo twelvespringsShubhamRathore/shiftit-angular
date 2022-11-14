@@ -1,8 +1,22 @@
-<mat-list role="list">
-    <mat-list-item role="listitem" [routerLink]="['home']">Dashboard</mat-list-item>
-    <mat-list-item role="listitem">Jobs</mat-list-item>
-    <mat-list-item role="listitem" [routerLink]="['messagecenter']">Massage Center</mat-list-item>
-    <mat-list-item role="listitem">Status Preferences</mat-list-item>
-    <mat-list-item role="listitem">Payment</mat-list-item>
-    <mat-list-item role="listitem">Account</mat-list-item>
+<div class="navbar">
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <a class="nav-link" [routerLink]="['dashboard']" >Dashboard</a>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <a class="nav-link" [routerLink]="['dashboard']" >Jobs</a>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <a class="nav-link" [routerLink]="['messagecenter]" >Massage Center</a>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <a class="nav-link" [routerLink]="['dashboard']" >Status Preferences</a>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <a class="nav-link" [routerLink]="['dashboard']" >Payment</a>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <a class="nav-link" [routerLink]="['dashboard']" >Account</a>
+    </mat-list-item>
   </mat-list>
+</div>

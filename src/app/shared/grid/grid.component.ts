@@ -9,7 +9,7 @@ import { gridColumn,gridRow } from '../grid-data-model';
 export class GridComponent implements OnInit {
 
   @Input() columns: string[] = []
-  @Input() gridData: gridRow[] = []
+  @Input() data: gridRow[] = []
   @Input() IsActionEnable: boolean = false;
 
   constructor() { }

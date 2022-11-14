@@ -1,35 +1,75 @@
 .sidebar{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
+  height: calc(100vh - 48px) !important;
+  width: 300px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  justify-content: space-between;
+  border-radius: 24px;
+  .nav-links{
     width: 100%;
-    height: 100%;
-    padding: 0px 20px;
-    .navlinks{
-      width: 80%;
-      margin-top: 2rem;
-      .logo{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-    }
-    mat-list{
+    height: auto;
+    .logo{
       width: 100%;
-      margin-bottom: 2rem;
-      border-top: 1px solid #F4F4F4;
-      .nav-footer{
-        display: flex;
-        align-items: center;
-        img{
-          margin-right: 10px;
-        }
-        a{
-          text-decoration: none;
-        }
+      padding: 40px 0px 20px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 70%;
+        max-width: 100%;
+        margin: 0px !important;
       }
     }
-
+  }
+  .nav-footer{
+    border-top: 2px solid #F6F6F6;
+    padding: 10px;
+    button{
+      width: 100%;
+    }
+  }
 }
+
+// .sidebar{
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: baseline;
+//     width: 100%;
+//     height: 100%;
+//     padding: 0px 20px;
+//     .navlinks{
+//       width: 80%;
+//       margin-top: 2rem;
+//       .logo{
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         img{
+//           max-width: 100%;
+//           width: 70%;
+//         }
+//       }
+//     }
+//     mat-list{
+//       width: 100% !important;
+//       margin-bottom: 10px;
+//       border-top: 1px solid #F4F4F4;
+//       .nav-footer{
+//         width: 100% !important;
+//         mat-button{
+//           width: 100% !important;
+//           img{
+//             margin-right: 10px;
+//           }
+//           a{
+//             text-decoration: none;
+//           }
+//         }
+//       }
+//     }
+
+// }

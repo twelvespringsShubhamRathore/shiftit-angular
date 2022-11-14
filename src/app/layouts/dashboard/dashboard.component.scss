@@ -1,0 +1,28 @@
+.wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: #E8EFF9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  .side-section{
+    flex: 23;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .main-section{
+    flex: 77;
+    display: flex;
+    justify-content: flex-start;
+    .main{
+      height: calc(100vh - 48px) !important;
+      width: 90%;
+      max-width: 100%;
+      background-color: #FFF;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

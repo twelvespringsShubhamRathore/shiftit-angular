@@ -31,7 +31,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
-    RouterModule,
+    RouterModule
   ],
   exports: [
     MatButtonModule,

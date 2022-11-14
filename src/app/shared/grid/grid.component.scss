@@ -1,0 +1,26 @@
+.grid{
+  width: 100%;
+  border: none;
+  border-spacing: 0 15px;
+  thead{
+    tr{
+      margin-bottom: 10px;
+      border-bottom:1px solid #F4F4F4;
+    }
+  }
+  tbody{
+    border-spacing: 0 15px;
+    tr{
+      border-radius: 24px !important;
+      border-bottom:1px solid #F4F4F4;
+      margin-bottom: 10px;
+      td{
+        padding: 0px 10px;
+      }
+    }
+  }
+}
+
+.w-100{
+  width: 400px !important;
+}
