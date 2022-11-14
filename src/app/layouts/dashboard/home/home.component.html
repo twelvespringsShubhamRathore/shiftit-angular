@@ -49,5 +49,8 @@
       <h2 class="page-title">Pending Job Approvals (6)</h2>
       <a class="primary-link">View all</a>
     </div>
+    <div class="data-body">
+      <app-grid [data]="gridData" [columns]="columns" [IsActionEnable]="IsActionEnable"></app-grid>
+    </div>
   </div>
 </div>

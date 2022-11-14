@@ -48,8 +48,8 @@
         cursor: pointer;
       }
       img{
-        height: 40px;
-        width: 30px;
+        height: 30px;
+        width: 25px;
         margin-left: 10px;
         cursor: pointer;
       }
@@ -65,6 +65,7 @@
     }
     .address{
       color: grey;
+      margin: 0px;
     }
   }
   .date-time-section{
@@ -74,9 +75,11 @@
     .date{
       font-size: 24px;
       color: #1d066b;
+      margin: 0px;
     }
     .time{
       font-size: 18px;
+      margin: 0px;
     }
   }
 }
