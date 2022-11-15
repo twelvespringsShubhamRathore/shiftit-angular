@@ -1,0 +1,19 @@
+.data-body{
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.filter-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mat-button{
+  padding: 5px 15px !important;
+}
+
+.active{
+  background-color: #1d066b !important;
+  color: #FFF;
+}

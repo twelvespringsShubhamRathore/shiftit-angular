@@ -19,7 +19,7 @@
     display: flex;
     justify-content: flex-start;
     .main{
-      height: auto;
+      height: calc(100vh - 48px) !important;
       min-height: calc(100vh - 48px) !important;
       width: 90%;
       max-width: 100%;
@@ -40,7 +40,6 @@
 @media screen and (max-width:1524px) {
   .wrapper{
     gap: 0px !important;
-    height: 100% !important;
   }
   .sede-section{
     flex: 18 !important;
@@ -54,7 +53,6 @@
   }
   .main-section{
     flex: 82 !important;
-    height: 100% !important;
     border-radius: 0% !important;
     .main{
       border-radius: 0% !important;

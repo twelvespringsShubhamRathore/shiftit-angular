@@ -1,0 +1,14 @@
+<div class="container-fluid py-2">
+  <div class="filter-container">
+    <a mat-button [ngClass]="{'active':status == 'all'}" (click)="changeStatus('all')">All Jobs</a>
+    <a mat-button [ngClass]="{'active':status == 'active'}" (click)="changeStatus('active')">Active Jobs</a>
+    <a mat-button [ngClass]="{'active':status == 'pending'}" (click)="changeStatus('pending')">Pending Approvels</a>
+    <a mat-button [ngClass]="{'active':status == 'paused'}" (click)="changeStatus('paused')">Paused Jobs</a>
+    <a mat-button [ngClass]="{'active':status == 'canceled'}" (click)="changeStatus('canceled')">Canceled Jobs</a>
+    <a mat-button [ngClass]="{'active':status == 'completed'}" (click)="changeStatus('completed')">Completed Jobs</a>
+  </div>
+  <div class="data-body">
+    <app-grid [data]="gridData" [columns]="columns" [IsActionEnable]="IsActionEnable" [IsSortEnable]="true"></app-grid>
+  </div>
+
+</div>

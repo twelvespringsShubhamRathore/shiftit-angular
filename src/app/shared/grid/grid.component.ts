@@ -11,6 +11,7 @@ export class GridComponent implements OnInit {
   @Input() columns: string[] = []
   @Input() data: gridRow[] = []
   @Input() IsActionEnable: boolean = false;
+  @Input() IsSortEnable: boolean = false;
 
 
   constructor() {

@@ -2,16 +2,23 @@
   <div class="grid">
       <div class="grid-header">
         <div class="grid-details">
-          <div class="grid-column" *ngFor="let col of columns;let i = index" [ngClass]="{'w-10':i==0}">
+          <div class="grid-column" *ngFor="let col of columns;let i = index" [ngClass]="{'w-10':i==0 || i == 6}">
             {{ col }}
           </div>
         </div>
-        <div class="icon-btn-wrapper"></div>
+        <div class="icon-btn-wrapper">
+          <mat-form-field appearance="outline" class="sort">
+            <mat-label>Sort by</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let col of columns">{{ col }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
       <div class="grid-body">
         <div class="grid-row" *ngFor="let row of data">
           <div class="grid-details">
-            <div class="grid-column" *ngFor="let item of row.columns;let i = index" [ngClass]="{'w-10':i==0}">
+            <div class="grid-column" *ngFor="let item of row.columns;let i = index" [ngClass]="{'w-10':i==0}" [ngClass]="{'w-10':item.columnType == 'currency' || item.columnType == 'number'}">
               <span *ngIf="item.columnkey != 'Status' && item.columnType != 'date'">{{ item.value }}</span>
               <button class="grid-menu pending" *ngIf="item.columnkey == 'status' || item.columnkey == 'Status'" mat-button [matMenuTriggerFor]="status">
                 {{ item.value }}

@@ -19,6 +19,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    max-height: calc(100vh - 100px) !important;
+    overflow: auto;
     .grid-row{
       width: 100%;
       display: flex;
@@ -35,10 +38,14 @@
 .grid-menu{
   font-size: 1rem !important;
   font-weight: normal !important;
-  padding: 2px 15px !important;
+  width: 100%;
+  padding: 2px 0px !important;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.sort{
+  width: 80% !important;
 }
 
 .cancled{

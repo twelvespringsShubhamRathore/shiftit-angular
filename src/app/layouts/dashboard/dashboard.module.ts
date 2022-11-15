@@ -20,6 +20,10 @@ const routes:Route[] = [
       {
         path:'messagecenter',
         loadChildren: () => import('./message-center/message-center.module').then(m => m.MessageCenterModule)
+      },
+      {
+        path:'jobs',
+        loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule)
       }
     ]
   }
