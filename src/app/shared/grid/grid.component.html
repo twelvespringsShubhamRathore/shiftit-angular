@@ -1,31 +1,47 @@
 <div class="container-fluid">
-  <table class="grid">
-    <thead>
-      <tr>
-        <th *ngFor="let col of columns" [ngClass]="{'w-100':(col == 'Facility Name')}">{{ col }}</th>
-        <th *ngIf="IsActionEnable"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let row of data">
-        <td *ngFor="let item of row.columns" [ngClass]="{'w-100':(item.columnkey == 'Facility Name')}">
-          {{ item.value }}
-        </td>
-        <td *ngIf="IsActionEnable">
-          <button mat-icon-button *ngIf="row.isViewEnable">
-            <img src="/assets/images/eye.png">
-          </button>
-          <button mat-icon-button *ngIf="row.isEditable">
-            <img src="/assets/images/edit.png">
-          </button>
-          <button mat-icon-button *ngIf="row.isDuplicatable">
-            <img src="/assets/images/copy.png">
-          </button>
-          <button mat-icon-button *ngIf="row.isDeletable">
-            <img src="/assets/images/dlt.png">
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="grid">
+      <div class="grid-header">
+        <div class="grid-details">
+          <div class="grid-column" *ngFor="let col of columns;let i = index" [ngClass]="{'w-10':i==0}">
+            {{ col }}
+          </div>
+        </div>
+        <div class="icon-btn-wrapper"></div>
+      </div>
+      <div class="grid-body">
+        <div class="grid-row" *ngFor="let row of data">
+          <div class="grid-details">
+            <div class="grid-column" *ngFor="let item of row.columns;let i = index" [ngClass]="{'w-10':i==0}">
+              <span *ngIf="item.columnkey != 'Status' && item.columnType != 'date'">{{ item.value }}</span>
+              <button class="grid-menu pending" *ngIf="item.columnkey == 'status' || item.columnkey == 'Status'" mat-button [matMenuTriggerFor]="status">
+                {{ item.value }}
+                <img src="/assets/images/edit.png" class="btn-img">
+              </button>
+              <mat-menu #status="matMenu">
+                <button mat-menu-item >Active</button>
+                <button mat-menu-item >Pending</button>
+                <button mat-menu-item >Paused</button>
+                <button mat-menu-item >Canceled</button>
+                <button mat-menu-item >Completed</button>
+              </mat-menu>
+              <span *ngIf="item.columnType=='date'">{{ item.value | date }}</span>
+            </div>
+          </div>
+          <div class="icon-btn-wrapper"  *ngIf="IsActionEnable">
+            <button mat-icon-button *ngIf="row.isViewEnable">
+              <img src="/assets/images/eye.png" class="btn-img">
+            </button>
+            <button mat-icon-button *ngIf="row.isEditable">
+              <img src="/assets/images/edit.png" class="btn-img">
+            </button>
+            <button mat-icon-button *ngIf="row.isDuplicatable">
+              <img src="/assets/images/copy.png" class="btn-img">
+            </button>
+            <button mat-icon-button *ngIf="row.isDeletable">
+              <img src="/assets/images/dlt.png" class="btn-img">
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>

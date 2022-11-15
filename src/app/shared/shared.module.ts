@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { TilesComponent } from './tiles/tiles.component';
 import { GridComponent } from './grid/grid.component';
 import { RouterModule } from '@angular/router';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [UploaderComponent, SidebarComponent, NavbarComponent, HeaderComponent, TilesComponent, GridComponent],
@@ -31,7 +32,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatMenuModule
   ],
   exports: [
     MatButtonModule,
@@ -48,7 +50,8 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     HeaderComponent,
     TilesComponent,
-    GridComponent
+    GridComponent,
+    MatMenuModule
   ],
 })
 export class SharedModule {}

@@ -1,5 +1,6 @@
 .wrapper{
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   width: 100%;
   background-color: #E8EFF9;
   display: flex;
@@ -10,19 +11,55 @@
     flex: 23;
     display: flex;
     justify-content: flex-end;
+    height: auto;
+    min-height: 100%;
   }
   .main-section{
     flex: 77;
     display: flex;
     justify-content: flex-start;
     .main{
-      height: calc(100vh - 48px) !important;
+      height: auto;
+      min-height: calc(100vh - 48px) !important;
       width: 90%;
       max-width: 100%;
       background-color: #FFF;
       border-radius: 24px;
       display: flex;
       flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width:1730px) {
+  .main{
+    width: 95% !important;
+  }
+}
+
+@media screen and (max-width:1524px) {
+  .wrapper{
+    gap: 0px !important;
+    height: 100% !important;
+  }
+  .sede-section{
+    flex: 18 !important;
+    height: 100% !important;
+    border-radius: 0% !important;
+
+  }
+  app-sidebar{
+    width: 100% !important;
+    border-right: 2px solid #F6F6F6 !important;
+  }
+  .main-section{
+    flex: 82 !important;
+    height: 100% !important;
+    border-radius: 0% !important;
+    .main{
+      border-radius: 0% !important;
+      width: 100% !important;
+      height: 100% !important;
     }
   }
 }

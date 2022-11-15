@@ -12,9 +12,12 @@ export class GridComponent implements OnInit {
   @Input() data: gridRow[] = []
   @Input() IsActionEnable: boolean = false;
 
-  constructor() { }
+
+  constructor() {
+   }
 
   ngOnInit(): void {
+    console.log(this.data)
   }
 
 }
