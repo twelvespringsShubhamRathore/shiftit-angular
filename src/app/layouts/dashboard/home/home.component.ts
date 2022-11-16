@@ -9,7 +9,7 @@ import { gridRow } from 'src/app/shared/grid-data-model';
 export class HomeComponent implements OnInit {
 
   username='Shubham'
-columns:string[] = []
+  columns:string[] = []
   gridData:gridRow[] = [];
 
 
